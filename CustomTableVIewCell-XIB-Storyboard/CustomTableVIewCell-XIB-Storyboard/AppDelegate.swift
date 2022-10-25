@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  customCell-XIB
+//  CustomTableVIewCell-XIB-Storyboard
 //
-//  Created by ALYSSON MENEZES on 23/10/22.
+//  Created by ALYSSON MENEZES on 24/10/22.
 //
 
 import UIKit
