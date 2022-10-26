@@ -12,13 +12,23 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" id="KGk-i7-Jjw" customClass="CustomTableViewCell" customModule="CustomTableVIewCell_XIB_Storyboard" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="archivebox.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="o2p-w3-vLZ">
+                        <rect key="frame" x="7" y="4" width="50" height="33.666666666666671"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="1GT-db-QVI"/>
+                            <constraint firstAttribute="height" constant="35" id="l64-aB-a85"/>
+                        </constraints>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g1-GV-X4Z">
-                        <rect key="frame" x="35" y="11.666666666666664" width="250" height="21"/>
+                        <rect key="frame" x="77" y="12" width="41.333333333333343" height="21"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="DSG-7L-CnM"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -26,17 +36,22 @@
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="2g1-GV-X4Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="281-ke-jJ1"/>
-                    <constraint firstItem="2g1-GV-X4Z" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="5J4-7K-iL9"/>
-                    <constraint firstItem="2g1-GV-X4Z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6mN-fD-jc5"/>
-                    <constraint firstAttribute="trailing" secondItem="2g1-GV-X4Z" secondAttribute="trailing" constant="35" id="tpw-Uj-mSO"/>
+                    <constraint firstItem="o2p-w3-vLZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3Rg-1I-u6r"/>
+                    <constraint firstItem="o2p-w3-vLZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="4kQ-Yg-RBy"/>
+                    <constraint firstItem="o2p-w3-vLZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="JHi-xd-tdj"/>
+                    <constraint firstItem="2g1-GV-X4Z" firstAttribute="leading" secondItem="o2p-w3-vLZ" secondAttribute="trailing" constant="20" id="Ubq-qH-NTE"/>
+                    <constraint firstItem="2g1-GV-X4Z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="das-yE-RET"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="logoImageVIew" destination="o2p-w3-vLZ" id="lWt-nk-Etb"/>
                 <outlet property="titleLabel" destination="2g1-GV-X4Z" id="VNO-us-YUU"/>
             </connections>
-            <point key="canvasLocation" x="145" y="-10"/>
+            <point key="canvasLocation" x="144.61538461538461" y="-10.663507109004739"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="archivebox.circle.fill" catalog="system" width="128" height="123"/>
+    </resources>
 </document>

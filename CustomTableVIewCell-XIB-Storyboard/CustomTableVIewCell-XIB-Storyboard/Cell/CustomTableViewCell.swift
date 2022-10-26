@@ -10,7 +10,7 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var logoImageVIew: UIImageView!
     
     static let identifier : String = "CustomTableViewCell" // SEMPRE usar id com mesmo nome da classe static -> nao tem nenhuma dependencia ao istanciar ele   
     
@@ -25,8 +25,9 @@ class CustomTableViewCell: UITableViewCell {
         super.awakeFromNib()
        
     }
-    func setupCell(title : String ){
-        titleLabel.text = title
+    func setupCell(user : User ){
+        titleLabel.text = user.name
+        logoImageVIew.image = user.image
     }
  
     
