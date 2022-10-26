@@ -23,6 +23,7 @@ class CustomTableViewCell: UITableViewCell {
     //MARK: - CICLO DE VIDA INICIAL DA XIB (SEMELHANTE AO VIEW DIDLOAD)
     override func awakeFromNib() {
         super.awakeFromNib()
+        selectionStyle = .none
        
     }
     func setupCell(user : User ){

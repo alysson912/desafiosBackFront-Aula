@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let listName : [User] = [
         User(name: "AUDI", image: UIImage(named: "audi") ?? UIImage()),
         User(name: "TOYOTA", image: UIImage(named: "toyota") ?? UIImage()),
-        User(name: "KoenningSeeg", image: UIImage(named: "koening") ?? UIImage()),
+        User(name: "KoennigSeeg", image: UIImage(named: "koening") ?? UIImage()),
         User(name: "Fiat", image: UIImage(named: "fiat") ?? UIImage()),
         User(name: "Troller", image: UIImage(named: "troller") ?? UIImage())
         
@@ -51,6 +51,10 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(listName[indexPath.row].name)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     
