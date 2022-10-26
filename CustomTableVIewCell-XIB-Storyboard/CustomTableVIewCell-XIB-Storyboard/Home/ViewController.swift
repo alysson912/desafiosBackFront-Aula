@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
      
-    let listName : [User] = [
+    var listName : [User] = [
         User(name: "AUDI", image: UIImage(named: "audi") ?? UIImage()),
         User(name: "TOYOTA", image: UIImage(named: "toyota") ?? UIImage()),
         User(name: "KoennigSeeg", image: UIImage(named: "koening") ?? UIImage()),
@@ -56,7 +56,15 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
+    // metodo para deixar editar a celula
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    // atalho commit , habilitando remover celula deslizando
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        listName.remove(at: indexPath.row)
+        tableView.reloadData() // faLA para table view recaregar 
+    }
     
 }
 
